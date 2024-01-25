@@ -1,0 +1,27 @@
+sentence = "The quick brown fox jumps over the lazy dog."
+
+# Initialize counters
+charCount = 0
+wordCount = 0
+vowelCount = 0
+
+# Iterate through each character in the sentence
+for char in sentence:
+    charCount += 1  # Increment character count
+
+    # Check if the character is a letter (assuming English alphabet)
+    if char.isalpha():
+        # Increment word count when a space is encountered
+        if char == ' ':
+            wordCount += 1
+        # Check if the letter is a vowel (case-insensitive)
+        elif char.lower() in 'aeiou':
+            vowelCount += 1
+
+# Increment word count for the last word (after the last space)
+wordCount += 1
+
+# Print the results
+print("Length of the sentence:", charCount)
+print("Number of words in the sentence:", wordCount)
+print("Number of vowels in the sentence:", vowelCount)
